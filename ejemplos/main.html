@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Vortex Video</title>
+		<link rel="stylesheet" href="VortexVideo.css" type="text/css">
+        
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="jQueryUI/css/ui-darkness/jquery-ui-1.10.1.custom.css" type="text/css">
+	</head>
+	
+	<body>		
+        <div id="panel_principal">
+        </div>	
+        
+        <div id="plantillas">
+            <div id="plantilla_app_vortex_video">
+                <div id="panel_buscador">
+                    <input id="txt_nombre_amigo" type="text"/>
+                    <input id="btn_crear_receptor" type="button" class="btn btn-primary" value="Agregar Amigo"/>
+                </div>
+                <div id="panel_amigos">
+                
+                </div>
+            </div>  
+            <div id="plantilla_login" title="Iniciar Sesión">
+                <label id="lbl_nombre_usuario"> Nombre de Usuario:</label>
+                <input id="txt_nombre_usuario" type="text"/>
+            </div>  
+            <div id="plantilla_receptor_video" class="receptor_video">
+                <div id="lbl_nombre_usuario"></div>
+                <img id="img" src=""/>
+                <span class="caption simple-caption">  
+                    <p>Click para pedir imagen!</p>  
+                </span>  
+            </div> 
+            <div id="plantilla_transmisor_video" class="transmisor_video">
+                <div id="lbl_nombre_usuario"></div>
+                <video id="video" width="320" height="240" autoplay></video>
+                <div id="overlay"></div>
+                <span class="caption simple-caption">  
+                    <p>Click para enviar imagen!</p>  
+                </span>  
+            </div> 
+        </div>  
+    </body>
+    
+    <script type="text/javascript" src="linq.min.js"></script> 
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script> 
+    <script type="text/javascript" src="jQueryUI/js/jquery-ui-1.9.1.custom.js"></script>  
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Vortex.js"></script>
+    <script type="text/javascript" src="FiltrosYTransformaciones.js"></script>
+    <script type="text/javascript" src="NodoClienteHTTP.js"></script> 
+    <script type="text/javascript" src="GeneradorDeIdMensaje.js"></script> 
+    <script type="text/javascript" src="NodoClienteHTTP.js"></script> 
+    <script type="text/javascript" src="NodoMultiplexor.js"></script> 
+    <script type="text/javascript" src="NodoPortalBidi.js"></script> 
+    <script type="text/javascript" src="NodoPortalBidiMonoFiltro.js"></script> 
+    <script type="text/javascript" src="NodoRouter.js"></script> 
+    <script type="text/javascript" src="PataConectora.js"></script> 
+    <script type="text/javascript" src="Canal.js"></script> 
+    <script type="text/javascript" src="NodoPortalConCanal.js"></script> 
+    <script type="text/javascript" src="NodoPortalBidiMonoFiltroConCanal.js"></script> 
+    <script type="text/javascript" src="VistaLogin.js"></script> 
+    <script type="text/javascript" src="Usuario.js"></script> 
+    <script type="text/javascript" src="NodoConectorSocket.js"></script>
+    <script type="text/javascript" src="NodoAppVortexVideo.js"></script> 
+    <script type="text/javascript" src="NodoReceptorVideo.js"></script> 
+    <script type="text/javascript" src="NodoTransmisorVideo.js"></script>  
+    <script type="text/javascript" src="VortexVideo.js"></script> 
+    <script type="text/javascript" src="phonegap.js"></script>
+    
+    <script src="socket.io.js"></script>
+</html>
+
