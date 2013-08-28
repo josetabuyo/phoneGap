@@ -2,7 +2,7 @@ var onDeviceReady = function() {
     var clienteHTTP = new NodoClienteHTTP('http://router-vortex.herokuapp.com', 1000);             
     NodoRouter.instancia.conectarBidireccionalmenteCon(clienteHTTP);
     
-	$('#texto').get(0).addEventListener('touchstart', function(e){
+	document.addEventListener('touchstart', function(e){
 		alert(e.screenX + ' ' + e.screenY);
 	}, false);
 	
