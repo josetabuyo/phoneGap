@@ -2,16 +2,11 @@ var onDeviceReady = function() {
     var clienteHTTP = new NodoClienteHTTP('http://router-vortex.herokuapp.com', 1000);             
     NodoRouter.instancia.conectarBidireccionalmenteCon(clienteHTTP);
     
-    var pantalla_explorador = $("#pantalla_panel_control_rangers");
-    var _this = this;
-    var login = new PantallaLogin({
-        callback_usuario: function(un_usuario){
-            var ranger = new Ranger({ nombre: un_usuario.nombre});
-            var panel_control = new PanelControlRangers();        
-            panel_control.dibujarEn(pantalla_explorador.find("#contenido"));          
-            $.mobile.changePage (pantalla_explorador);
-        }
-    });
+	$('#texto').get(0).addEventListener('touchstart', function(e){
+		alert(e.screenX + ' ' + e.screenY);
+	}, false);
+	
+	
 };
 
 $(document).ready(function() {  
