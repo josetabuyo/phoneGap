@@ -3,6 +3,10 @@ var onDeviceReady = function() {
     var clienteHTTP = new NodoClienteHTTP('http://router-vortex.herokuapp.com', 1000);             
     NodoRouter.instancia.conectarBidireccionalmenteCon(clienteHTTP);
     
+	
+	$('#content').height(getRealContentHeight());
+	
+	
 	var gnStartX = 0;
 	var gnStartY = 0;
 	var gnEndX = 0;
@@ -41,17 +45,6 @@ var getRealContentHeight = function () {
 
 //$(document).ready(function() {  
 $(function() {  
-
-	$(document).on('pageshow', '#index', function(){       
-		alert(getRealContentHeight());
-		$('#content').height(getRealContentHeight());
-	});
-
-	
-
-
-	
-	
 	
     // are we running in native app or in browser?
     window.isphone = false;
