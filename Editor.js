@@ -25,8 +25,33 @@ var onDeviceReady = function() {
 
 };
 
+
+var getRealContentHeight = function () {
+	var header = $.mobile.activePage.find("div[data-role='header']:visible");
+	var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
+	var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
+	var viewport_height = $(window).height();
+
+	var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+	if((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
+		content_height -= (content.outerHeight() - content.height());
+	} 
+	return content_height - 2;
+};
+
 //$(document).ready(function() {  
 $(function() {  
+
+	$(document).on('pageshow', '#index', function(){       
+		$('#content').height(getRealContentHeight());
+	});
+
+	
+
+
+	
+	
+	
     // are we running in native app or in browser?
     window.isphone = false;
     if(document.URL.indexOf("file://") == -1) {
