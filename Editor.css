@@ -2,6 +2,11 @@
     display:none;
 }
 
+
+#container{
+	border: solid 1px #AAAAAA;
+}
+
 #texto{
 	height:100% !important;
 }

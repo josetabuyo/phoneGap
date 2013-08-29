@@ -9,17 +9,17 @@ var onDeviceReady = function() {
 	var gnEndY = 0;
 	
 	
-	$('#texto').get[0].addEventListener('touchstart',function(event) {
+	window.addEventListener('touchstart',function(event) {
 	  gnStartX = event.touches[0].pageX;
 	  gnStartY = event.touches[0].pageY;
 	},false);
 
-	$('#texto').get[0].addEventListener('touchmove',function(event) {
+	window.addEventListener('touchmove',function(event) {
 	  gnEndX = event.touches[0].pageX;
 	  gnEndY = event.touches[0].pageY;
 	},false);
 
-	$('#texto').get[0].addEventListener('touchend',function(event) {
+	window.addEventListener('touchend',function(event) {
 	  alert('START (' + gnStartX + ', ' + gnStartY + ')   END (' + gnEndX + ', ' + gnEndY + ')');
 	},false);
 
