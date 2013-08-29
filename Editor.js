@@ -43,6 +43,7 @@ var getRealContentHeight = function () {
 $(function() {  
 
 	$(document).on('pageshow', '#index', function(){       
+		alert(getRealContentHeight());
 		$('#content').height(getRealContentHeight());
 	});
 
