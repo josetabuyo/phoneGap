@@ -2,6 +2,10 @@
     display:none;
 }
 
+#texto{
+	height:100% !important;
+}
+
 /*#pantalla_explorador #div_mapa,
 #pantalla_explorador #contenido{
     height: 100%;
