@@ -13,20 +13,39 @@ var onDeviceReady = function() {
 	var gnEndY = 0;
 	
 	
+	$('textarea').click(function (e){
+		var   x =  e.pageX;
+		var   y =  e.pageY;
+		//int of top position
+		//remember u need absolute position to calculate parents,grandparents to find true                    
+		// position from body tag to whereever textarea might be (html) wise
+		var tx = parseInt($(this).css('left'));
+		var ty = parseInt($(this).css('top')); 
+		var fx = x-tx; //final x
+		var fy = y-ty; // final y
+		
+		alert('X=> '+fx + ' Y=>'+fy);
+		
+	});
+	
+	
+	/*
 	window.addEventListener('touchstart',function(event) {
 	  gnStartX = event.touches[0].pageX;
 	  gnStartY = event.touches[0].pageY;
 	},false);
-
+	
 	window.addEventListener('touchmove',function(event) {
 	  gnEndX = event.touches[0].pageX;
 	  gnEndY = event.touches[0].pageY;
 	},false);
-
+	
 	window.addEventListener('touchend',function(event) {
 	  alert('START (' + gnStartX + ', ' + gnStartY + ')   END (' + gnEndX + ', ' + gnEndY + ')');
 	},false);
-
+	*/
+	
+	
 };
 
 
